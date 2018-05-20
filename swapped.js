@@ -3,9 +3,9 @@
 function generateRandomElemId(identicatorName, idLength) {
     const id = [];
     for (let i = 0; i < idLength; i++) {
-       id.push(Math.random() * 100 * i);
+      id.push(Math.ceil(Math.random() * 100 * i));
     }
-    return id;
+    return identicatorName + id.join('');
 }
 
 // choice one item from array
