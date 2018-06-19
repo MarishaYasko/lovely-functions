@@ -37,3 +37,21 @@ export function reverseEntityInsertion(entity: any[]) {
   }
 }
 // no done
+
+// selection sort
+export function selectionSort(entity: any[]) {
+  for (let i = 0; i < entity.length; i++) {
+    const first = entity[i];
+    let indexOfCurrent = i;
+    while (indexOfCurrent < entity.length) {
+      indexOfCurrent++;
+      if (first > entity[indexOfCurrent]) {
+        const current = entity[indexOfCurrent];
+        entity[indexOfCurrent] = first;
+        entity[i] = current;
+        indexOfCurrent = entity.length;
+      }
+    }
+  }
+  return entity;
+}
