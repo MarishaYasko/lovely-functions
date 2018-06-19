@@ -18,3 +18,22 @@ function choiceOneElemFromArray(items, id) {
     }
     return choice;
 }
+
+// insertion sort
+export function reverseEntityInsertion(entity: any[]) {
+  for (let i = 0; i < entity.length; i++) {
+    const next = entity[i + 1];
+    if (entity[i] > entity[i + 1]) {
+      entity[i + 1] = entity[i];
+      entity[i] = next;
+      let j = i;
+      while (j > 0) {
+        j--;
+        if (entity[i] < entity[j]) {
+          entity[j] = entity[i];
+        }
+      }
+    }
+  }
+}
+// no done
