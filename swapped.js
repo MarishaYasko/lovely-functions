@@ -55,3 +55,13 @@ export function selectionSort(entity: any[]) {
   }
   return entity;
 }
+
+// block2Separator
+for (let i = 0; i <= separateCount; ++i) {
+     newItems2Block.push(items[i]);
+     if (items[i * 2]) {
+     newItems2Block.push(items[i * 2]);
+   }
+   newItems.push(newItems2Block);
+   newItems2Block = [];
+}
